@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/TheEndurance/layout/issues"
   },
-  "homepage": "https://github.com/TheEndurance/layout#readme"
+  "homepage": "https://github.com/TheEndurance/layout#readme",
+  "dependencies": {
+    "three": "^0.93.0"
+  }
 }
