@@ -1,0 +1,24 @@
+{
+  "name": "layout",
+  "version": "1.0.0",
+  "description": "Easily draw layouts for construction projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheEndurance/layout.git"
+  },
+  "keywords": [
+    "Layout",
+    "designer",
+    "three.js"
+  ],
+  "author": "Rawa Jalal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheEndurance/layout/issues"
+  },
+  "homepage": "https://github.com/TheEndurance/layout#readme"
+}
