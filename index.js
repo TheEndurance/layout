@@ -57,14 +57,31 @@ function init() {
         
     }
     //Calculate angle between vectors
-    //console.log(secondPoint.angleTo(thirdPoint));
+    var x = 10;
+    var y = 10;
+    x = x*Math.cos(Math.PI/4)-y*Math.sin(Math.PI/4);
+    y = y*Math.cos(Math.PI/4)+x*Math.sin(Math.PI/4);
+    
+    var thirdLineGeometry = new THREE.Geometry();
+    thirdLineGeometry.vertices.push(firstPoint);
+    thirdLineGeometry.vertices.push(new THREE.Vector3(x,y,0));
+    var thirdLine = new THREE.Line(thirdLineGeometry,material);
+    scene.add(thirdLine);
+
+    console.log("x'",x);
+    console.log("y'",y);
+    console.log(secondPoint.angleTo(thirdPoint));
+    console.log(calculate2DAngle(secondPoint,thirdPoint));
     
 
 }
 
 function calculate2DAngle(vector1,vector2){
     //cos(theta) = (vector1 dot vector2) / (length vector1) * (length vector2)
-    
+    // theta = arcos ( (vector1 dot vector2) / (length vector1) * (length vector2) )
+    var dotProduct = (vector1.x*vector2.x) + (vector1.y*vector2.y);
+    var length = Math.sqrt(Math.pow(vector1.x,2)+Math.pow(vector1.y,2)) * Math.sqrt(Math.pow(vector2.x,2)+Math.pow(vector2.y,2));
+    return Math.acos(dotProduct/length);
 }
 
 function calculateIncidentAngle(x1,y1,x2,y2){
